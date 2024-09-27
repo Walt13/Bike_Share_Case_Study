@@ -42,4 +42,4 @@ OriginalDownloadedData/202407-divvy-tripdata/202407-divvy-tripdata.csv
 OriginalDownloadedData/202408-divvy-tripdata/202408-divvy-tripdata.csv
 TableCreateAndLoad/join_tables.sql
 TableCreateAndLoad/create_tables.sql
-.vscode\settings.json
+.vscode/
