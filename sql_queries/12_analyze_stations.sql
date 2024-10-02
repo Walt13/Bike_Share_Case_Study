@@ -32,16 +32,7 @@ ORDER BY
 LIMIT 20;
 
 
-SELECT
-    start_station_name,
-    start_lat,
-    start_long
-FROM
-    trips_year
-WHERE
-    start_station_name = 'Streeter Dr & Grand Ave'
-
-
+-- Top stations for members
 SELECT
     start_station_name,
     COUNT(start_station_name) AS count_station
