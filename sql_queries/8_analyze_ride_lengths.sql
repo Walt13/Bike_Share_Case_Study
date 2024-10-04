@@ -1,3 +1,21 @@
+-- How many rides total?
+SELECT
+    COUNT(member_casual)
+FROM
+    trips_year;
+-- 5586831 rides total
+
+-- How many rides total grouped by members vs casual
+SELECT
+    COUNT(ride_id),
+    member_casual
+FROM
+    trips_year
+GROUP BY
+    member_casual;
+-- 1985658 casual rides, 3601173 member rides
+
+
 -- What is the average ride length for all riders?
 SELECT
     AVG(ride_length_minutes)
