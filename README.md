@@ -109,7 +109,7 @@ either a starting or ending time with milliseconds, while the other record did n
 All of the info in the other fields match up for each pair of duplicates. Below
 is a screenshot that shows a sample which illustrates this.
 
-![Ride ID Duplicates](assets\ride_id_duplicates_arrows.png)
+![Ride ID Duplicates](assets/ride_id_duplicates_arrows.png)
 
 I decided to remove the records which did not have milliseconds. To do that, I ran
 the below query and confirmed that the duplicate ride_id's had been removed.
