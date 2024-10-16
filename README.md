@@ -32,9 +32,7 @@ The Cyclistic finance analysts have determined that annual members are more prof
 - **Google Earth:**
 
 
-# Preparation and Cleaning
-
-### Data Source
+# Data Source
 
 While the company in this case study, Cyclistic, is fictional, the data for this
 project comes from a real Chicago based bike-share service named Divvy. Divvy
@@ -69,12 +67,13 @@ Analytics course covers.  To resolve this, I instead decided to use PostgreSQL.
 The twelve .csv files for July of 2023 through June of 2024 were loaded into my
 PostgreSQL database and joined into one table (trips_year) for analysis.
 
-### Data Cleaning
+# Data Cleaning
 
-Once joined, the table which has the rides from all twelve months, trips_year, 
-had 5,734,381 records. Here are the steps I went through to clean the data.
+The trips_year table, which includes all of the data from the twelve months that
+we will be analyzing, had 5,734,381 records when first created. Here are the
+steps I went through to clean the data.
 
-#### 1. Remove Duplicate ride_id's
+### 1. Remove Duplicate ride_id's
 
 The first thing I did was to make sure that all of the ride id's were unique. I
 ran a query to find out how many distinct ride_id's there were.
@@ -131,7 +130,60 @@ RETURNING
     ride_id;
 ```
 
-#### 2. Clean Starting and Ending Locations
+### 2. Clean Starting and Ending Locations
 
+Next, I took a look to see how many records do not have a starting or ending station
+names and found that 1,459,837 records do not have at least one of these. However, 
+most of these records that are missing station names do have latitude and longitude
+information.
 
+If I were actually working with Cyclistic or Divvy for this project,
+I would ask and try and find out why some records have latitude and longitude
+information, but are missing station names. Are riders able to pickup and leave
+bikes even if they are not at a docking station? Or maybe the bikes properly
+docked, but there was an issue that prevented the station names from being recorded?
+
+For this case study, as long as there was latitude and longitude information for a
+record, I changed any NULL station names and station_id fields to "Not At Station".
+The below query was run to update the start_station_name to "Not At Station",
+and similar query's were run to update the end_station_name, start_station_id,
+and end_station_id.
+
+```sql
+UPDATE
+    trips_year
+SET
+    start_station_name = 'Not At Station'
+WHERE
+    (start_station_name IS NULL AND
+    start_station_id IS NULL) AND
+    (start_lat IS NOT NULL AND
+    start_long IS NOT NULL);
+```
+There were also 7,773 records which did not have end station names or ids, and
+also did not have end latitude and longitude info. For this case study, I decided
+to remove these records.
+
+Finally, there were 106 records which had ending station names and ids, but
+no ending latitude and longitude. For these 106 records, I was able to find the
+names of the stations by running the below query.
+
+```sql
+SELECT
+    end_station_name,
+    COUNT(end_station_id)
+FROM trips_year
+WHERE
+    end_lat IS NULL OR
+    end_lng IS NULL
+GROUP BY
+    end_station_name
+ORDER BY
+    COUNT(end_station_id) DESC;
+```
+
+once I had the names of the stations, I was able look through all of the records
+to find out what the latitude and longitude should be, and updated the 106 records.
+
+### 3. Clean Ride Times
 
