@@ -67,11 +67,11 @@ Analytics course covers.  To resolve this, I instead decided to use PostgreSQL.
 The twelve .csv files for July of 2023 through June of 2024 were loaded into my
 PostgreSQL database and joined into one table (trips_year) for analysis.
 
-# Data Cleaning
+# Data Cleaning and Processing
 
 The trips_year table, which includes all of the data from the twelve months that
 we will be analyzing, had 5,734,381 records when first created. Here are the
-steps I went through to clean the data.
+steps I went through to clean and process the data.
 
 ### 1. Remove Duplicate ride_id's
 
@@ -182,8 +182,83 @@ ORDER BY
     COUNT(end_station_id) DESC;
 ```
 
-once I had the names of the stations, I was able look through all of the records
+Once I had the names of the stations, I was able look through all of the records
 to find out what the latitude and longitude should be, and updated the 106 records.
 
+
 ### 3. Clean Ride Times
+
+The next item I looked at were the times for each ride.
+
+I found there were 134,983 rides that were under a minute long. Since these rides
+under 1 minute could easily have just been riders having trouble starting or
+undocking their bikes, I decided to remove all of these outliers.
+
+I also found that there were over 4,500 rides that were over 8 hours, with 393
+of those rides over 24 hours. I decided to remove all of these rides as well.
+The bikes may have just not been correctly docked, or there may have been other 
+technical issues preventing the ending of the rides on time.
+
+
+### 4. Add ride_length and ride_length_minutes Columns
+
+I thought it would be useful to add a new column to table for the ride length,
+which I did by running the two queries below.
+
+```sql
+ALTER TABLE
+    trips_year
+ADD
+    ride_length INTERVAL;
+
+UPDATE
+    trips_year
+SET
+    ride_length = ended_at - started_at;
+```
+The ride_length field is an Interval data type, which stores a time period in
+years, months, days, hours, minutes, and seconds e.g., "3 hours 30 minutes 5
+seconds". I thought that it would be useful to also have the ride length expressed
+in only minutes, so I added the ride_length_minutes column with the two queries
+below.
+
+```sql
+ALTER TABLE
+    trips_year
+ADD
+    ride_length_minutes NUMERIC(6,2);
+
+UPDATE
+    trips_year
+SET
+    ride_length_minutes = (EXTRACT(epoch FROM ride_length)/60)::numeric(6,2);
+```
+
+### 5. Add day_of_week Column
+
+I will eventually want to analyze the data by what day rides are started, so I
+created a new day_of_week column by running the two queries below.
+
+```sql
+ALTER TABLE
+    trips_year
+ADD
+    day_of_week VARCHAR;
+
+UPDATE
+    trips_year
+SET
+    day_of_week = CASE
+                    WHEN EXTRACT (DOW FROM started_at) = 0 THEN 'Sunday'
+                    WHEN EXTRACT (DOW FROM started_at) = 1 THEN 'Monday'
+                    WHEN EXTRACT (DOW FROM started_at) = 2 THEN 'Tuesday'
+                    WHEN EXTRACT (DOW FROM started_at) = 3 THEN 'Wednesday'
+                    WHEN EXTRACT (DOW FROM started_at) = 4 THEN 'Thursday'
+                    WHEN EXTRACT (DOW FROM started_at) = 5 THEN 'Friday'
+                    WHEN EXTRACT (DOW FROM started_at) = 6 THEN 'Saturday'
+                END;
+```
+
+
+### 6. Add start_hour Column
 
