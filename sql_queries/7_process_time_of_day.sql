@@ -21,7 +21,6 @@ GROUP BY
     EXTRACT(HOUR FROM started_at)
 ORDER BY
     EXTRACT(HOUR FROM started_at);
--- Note, saved screenshot in Assets folder (count_rides_started_by_hour.png)
     
 -- Adding start_hour column to the spreadsheet
 ALTER TABLE

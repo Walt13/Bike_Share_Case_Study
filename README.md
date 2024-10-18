@@ -262,3 +262,24 @@ SET
 
 ### 6. Add start_hour Column
 
+I also added a column that shows what hour of the day each ride started at.
+
+```sql
+ALTER TABLE
+    trips_year
+ADD
+    start_hour INTEGER;
+
+UPDATE
+    trips_year
+SET start_hour = EXTRACT(HOUR FROM started_at);
+```
+
+
+# Analysis
+
+
+![TotalRides](assets/Dashboard-RidesByRiderType.png)
+
+
+![AverageRideLengths](assets/Dashboard-AvgRideLengths.png)
