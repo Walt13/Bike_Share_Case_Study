@@ -7,7 +7,8 @@ offered on Coursera.
 
 [link to Coursera](https://www.coursera.org/learn/google-data-analytics-capstone/supplement/7PGIT/case-study-1-how-does-a-bike-share-navigate-speedy-success)
 
-For this scenario, I will be taking on the role of a junior data analyst working for a fictional bike-share company named Cyclistic.
+For this scenario, I will be taking on the role of a junior data analyst working
+for a fictional bike-share company named Cyclistic.
 
 
 # Background and Objective
@@ -16,11 +17,15 @@ Cyclistic offers a bike-share program which includes over 5800 bicycles and 600
 docking stations. Bikes can be unlocked from any dock and returned to any other
 dock.
 
-Customers can purchase a single-ride pass, a full-day pass, or an annual membership. Customers who purchase single-ride passes or full-day passes are referred to as
+Customers can purchase a single-ride pass, a full-day pass, or an annual membership.
+Customers who purchase single-ride passes or full-day passes are referred to as
 casual riders. Customers who purchase annual memberships are referred to as Cyclistic
 members.
 
-The Cyclistic finance analysts have determined that annual members are more profitable for the company than casual riders.  For this case study, my objective will be to find how casual riders and members use Cyclistic bikes differently, and provide recommendations on how to convert casual riders to members.
+The Cyclistic finance analysts have determined that annual members are more profitabl
+for the company than casual riders.  For this case study, my objective will be to
+find how casual riders and members use Cyclistic bikes differently, and provide
+recommendations on how to convert casual riders to members.
 
 
 # Tools Used
@@ -278,8 +283,42 @@ SET start_hour = EXTRACT(HOUR FROM started_at);
 
 # Analysis
 
+### Introduction
+
+My objective for this case study is to see how casual riders and Cyclistic members
+use Cyclistic bikes differently.
+
+To start with, of the over 5.5 millions rides in the year that is being analyzed
+(July 2023 through June 2024), 64% of the rides were taken by Cyclistic members.
 
 ![TotalRides](assets/Dashboard-RidesByRiderType.png)
 
+### Ride Length
+
+I then looked at the average ride lengths for both casual riders and members. Casual
+riders ended up having an average ride length of over 20 minutes, while members
+had ride lengths of just over 12 minutes. So, it seems that When casual riders
+decide to take a ride with a Cyclistic bike, their rides are much longer than when
+members use the Cyclistic service.
+
+I also took a look at the average ride lengths by day of the week. As can be seen in 
+the line graph in the chart below, both casual riders and members had higher
+average ride lengths on Saturdays and Sundays. Casual riders averaged around 23.5
+minutes for the weekend days, and members averaged around 13.7 minutes for those
+same weekend days. During the week, the average ride lengths for casual riders dropped
+to around 18.5 minutes (from 23.5 minutes on the weekend), while the average ride
+length for members during the week was around 11.8 minutes (from 13.7 minutes on
+the weekend).
+
+While average ride lengths were higher on the weekend for both casual riders and
+members, the drop-off in average ride time during the week was higher for casual
+riders.
 
 ![AverageRideLengths](assets/Dashboard-AvgRideLengths.png)
+
+
+### Rides by Starting Hour
+
+
+
+![RidesByStartingHour](assets/Dashboard-RideHour.png)
