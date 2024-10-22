@@ -29,7 +29,7 @@ GROUP BY
     start_station_name
 ORDER BY
     count_station DESC
-LIMIT 20;
+LIMIT 10;
 
 
 -- Top stations for members
@@ -45,4 +45,4 @@ GROUP BY
     start_station_name
 ORDER BY
     count_station DESC
-LIMIT 20;
+LIMIT 10;

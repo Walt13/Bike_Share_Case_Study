@@ -319,6 +319,38 @@ riders.
 
 ### Rides by Starting Hour
 
+Next, I looked at the hour that riders started their rides at.
 
+For casual riders, the number of rides start to slowly ramp up in the morning,
+and eventually reach a peak at 5pm before falling off again. This would seem to
+indicate that casual riders are mostly using the Cyclistic service for rides
+after work.
+
+For members, the number of rides reach a peak at 8am and fall off over the next
+two hours. However, around 10am, the number of rides start to ramp up again, and
+eventually reach an even higher peak at 5pm. Since the peaks are at 8am and 5pm,
+that would suggest that Cyclistic members are using the service to commute to and
+from work.
 
 ![RidesByStartingHour](assets/Dashboard-RideHour.png)
+
+
+### Rides by Day of Week and Rides by month
+
+I also thought it would be useful to look at the day of the week that casual and
+member riders start their rides. From the chart below, we can see that members
+start more of their rides during the week versus the weekend.  On the other hand,
+casual riders take most of their rides on the weekend as opposed to during the week.
+
+I also took a look at the month rides were taken in the second part of the chart
+below. From this we can see that for both casual riders and members, use of the 
+Cyclistic service was much higher in the summer months and significantly lower
+in the winter months.
+
+![RidesByDayOfWeekAndMonth](assets/Dashboard-RidesByDayAndMonth.png)
+
+
+### Top Stations for Members and Casual Riders
+
+![Top10Stations](assets/GoogleEarthTop10Stations_Final.png)
+
