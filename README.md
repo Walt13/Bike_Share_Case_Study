@@ -350,7 +350,40 @@ in the winter months.
 ![RidesByDayOfWeekAndMonth](assets/Dashboard-RidesByDayAndMonth.png)
 
 
-### Top Stations for Members and Casual Riders
+### Top Starting Stations for Members and Casual Riders
+
+Finally, I took at look at the top stations that member and casual riders used.
+
+#### Top 10 Starting Stations for Casual Riders
+
+| Station Name                       | Count of Rides Started |
+|------------------------------------|------------------------|
+| Streeter Dr & Grand Ave            | 46511                  |
+| DuSable Lake Shore Dr & Monroe St  | 31563                  |
+| Michigan Ave & Oak St              | 22958                  |
+| DuSable Lake Shore Dr & North Blvd | 20994                  |
+| Millennium Park                    | 19811                  |
+| Shedd Aquarium                     | 18661                  |
+| Dusable Harbor                     | 16424                  |
+| Theater on the Lake                | 16200                  |
+| Adler Planetarium                  | 12645                  |
+| Indiana Ave & Roosevelt Rd         | 11965                  |
+
+#### Top 10 Starting Stations for Members
+
+| Station Name                       | Count of Rides Started |
+|------------------------------------|------------------------|
+| Clinton St & Washington Blvd       | 27346                  |
+| Kingsbury St & Kinzie St           | 26324                  |
+| Clark St & Elm St                  | 24298                  |
+| Clinton St & Madison St            | 22168                  |
+| Wells St & Concord Ln              | 20427                  |
+| Wells St & Elm St                  | 20337                  |
+| University Ave & 57th St           | 18894                  |
+| Broadway & Barry Ave               | 17960                  |
+| Clinton St & Jackson Blvd          | 17730                  |
+| State St & Chicago Ave             | 17479                  |
+
 
 ![Top10Stations](assets/GoogleEarthTop10Stations_Final.png)
 
