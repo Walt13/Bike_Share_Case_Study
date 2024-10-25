@@ -353,6 +353,8 @@ in the winter months.
 ### Top Starting Stations for Members and Casual Riders
 
 Finally, I took at look at the top stations that member and casual riders used.
+Here are the top 10 stations that casual riders and members started their rides
+from.
 
 #### Top 10 Starting Stations for Casual Riders
 
@@ -384,6 +386,66 @@ Finally, I took at look at the top stations that member and casual riders used.
 | Clinton St & Jackson Blvd          | 17730                  |
 | State St & Chicago Ave             | 17479                  |
 
+Once I had the top 10 stations for both members and casual riders, I used the
+latitude and longitude information in the data to plot the locations in Google
+Earth. The map below shows the top member stations with blue pins and the top
+casual rider stations with orange pins.
 
 ![Top10Stations](assets/GoogleEarthTop10Stations_Final.png)
 
+With the stations plotted out on a map, it is evident that the most used starting
+stations for casual riders are along the shores of Lake Michigan and near recreational
+areas such as parks and the Navy Pier. On the other hand, the most used starting
+stations for members look to be in residential or commercial areas.
+
+The map below shows a more zoomed in view centered around Downtown Chicago and
+the Navy Pier.
+
+![TopStationsZoomed](assets/GoogleEarthTop10Stations_zoomed_Final.png)
+
+
+# Conclusions
+
+### Summary of Key Findings
+
+- The majority of rides taken in the time frame being studied were taken by Cyclistic
+members (64.46%).
+- Casual riders take longer rides, with their trips averaging out to over 20
+minutes. The average trip length for members was just over 12 minutes.
+- Rides were longer on weekends for both casual riders and members.
+- For members, the number of rides starts to ramp up in the early morning and
+reaches a peak at 8am before dropping off over the next two hours. However, after
+10am, the number of rides starts to ramp up again and reaches an even higher peak
+at the 5pm hour. This would seem to indicate that members are using the Cyclistic
+service to commute to and from work. 
+- For casual riders, the number of rides starts to ramp up in the morning, and
+eventually reaches a peak at 5pm.
+- Members used their bikes more during the week and the weekend. This is another
+indication that of of the main reasons members use the Cyclistic service is to
+commute back and forth to work. On the other hand, casual riders started more rides
+on the weekend versus during the week.
+- The number of rides for both members and casual riders were much higher in the
+summer and spring months than in the winter. This is not unexpected since winters
+in Chicago are cold, and sometimes below freezing.
+- The top stations that casual riders started their rides from were close to the
+shore of Lake Michigan, and near recreational areas such as parks or the Navy Pier.
+For members, their top stations were in more of the residential and commercial
+areas of Chicago.
+
+
+### Recommendations
+
+- Casual riders seem to use the service more for leisure and recreational
+use. Perhaps Cyclistic can try creating biking clubs or organize group rides around
+the more scenic areas of Chicago. As part of this, Cyclistic could offer a special
+annual membership package for these riders.
+
+- Casual riders are more likely to use the service on weekends than during the week.
+Cyclistic could create a new type of annual membership package that focuses on
+weekend use to try and entice these riders into becoming members.
+
+- To more effectively target casual riders, marketing can be concentrated at the
+stations that casual riders use the most.
+
+
+# Closing Thoughts
