@@ -1,14 +1,12 @@
 # Introduction
 
 This case study is the capstone project for the Google Data Analytics Certificate
-offered on Coursera. 
+offered on Coursera. For this scenario, I will be taking on the role of a junior
+data analyst working for a fictional bike-share company named Cyclistic.
 
-[click here...change me](Case-Study-1_How-does-a-bike-shared-navigate-speedy-success_.pdf)
+Click [here](https://www.coursera.org/learn/google-data-analytics-capstone/supplement/7PGIT/case-study-1-how-does-a-bike-share-navigate-speedy-success) for more details on the course.
 
-[link to Coursera](https://www.coursera.org/learn/google-data-analytics-capstone/supplement/7PGIT/case-study-1-how-does-a-bike-share-navigate-speedy-success)
-
-For this scenario, I will be taking on the role of a junior data analyst working
-for a fictional bike-share company named Cyclistic.
+More details on the case study can be found [here](Case-Study-1_How-does-a-bike-shared-navigate-speedy-success_.pdf).
 
 
 # Background and Objective
@@ -22,7 +20,7 @@ Customers who purchase single-ride passes or full-day passes are referred to as
 casual riders. Customers who purchase annual memberships are referred to as Cyclistic
 members.
 
-The Cyclistic finance analysts have determined that annual members are more profitabl
+The Cyclistic finance analysts have determined that annual members are more profitable
 for the company than casual riders.  For this case study, my objective will be to
 find how casual riders and members use Cyclistic bikes differently, and provide
 recommendations on how to convert casual riders to members.
@@ -30,11 +28,13 @@ recommendations on how to convert casual riders to members.
 
 # Tools Used
 
-- **SQL:**
-- **PostgreSQL:**
-- **VS Code:**
-- **Tableau:**
-- **Google Earth:**
+Below is a list of the main tools I used for this project.
+
+- **SQL:** Used to perform the analysis.
+- **PostgreSQL:** Created a PostgreSQL database to store the data in.
+- **VS Code:** The editor used to write the queries.
+- **Tableau:** Used to create the charts using the data obtained from the analysis.
+- **Google Earth:** Created the maps with the station locations plotted.
 
 
 # Data Source
@@ -406,6 +406,10 @@ the Navy Pier.
 
 # Conclusions
 
+The goal of this case study was to find out how casual riders and Cyclistic members
+use their bikes differently, and provide recommendations on how Cyclistic can 
+convert more casual riders into members.
+
 ### Summary of Key Findings
 
 - The majority of rides taken in the time frame being studied were taken by Cyclistic
@@ -421,7 +425,7 @@ service to commute to and from work.
 - For casual riders, the number of rides starts to ramp up in the morning, and
 eventually reaches a peak at 5pm.
 - Members used their bikes more during the week and the weekend. This is another
-indication that of of the main reasons members use the Cyclistic service is to
+indication that one of the main reasons members use the Cyclistic service is to
 commute back and forth to work. On the other hand, casual riders started more rides
 on the weekend versus during the week.
 - The number of rides for both members and casual riders were much higher in the
@@ -429,7 +433,7 @@ summer and spring months than in the winter. This is not unexpected since winter
 in Chicago are cold, and sometimes below freezing.
 - The top stations that casual riders started their rides from were close to the
 shore of Lake Michigan, and near recreational areas such as parks or the Navy Pier.
-For members, their top stations were in more of the residential and commercial
+For members, their top stations were more in the residential and commercial
 areas of Chicago.
 
 
@@ -447,5 +451,16 @@ weekend use to try and entice these riders into becoming members.
 - To more effectively target casual riders, marketing can be concentrated at the
 stations that casual riders use the most.
 
+- Since both casual riders as well as members use the service less in the winter,
+Cyclistic could try offering seasonal memberships. The hope would be that this
+would entice some casual riders to join, and once riders use the Cyclistic service
+more, they would eventually decide to upgrade to the full annual membership plan.
+
 
 # Closing Thoughts
+
+This Cyclistic bike share capstone project was my first data analytics case study
+and it was a great way to practice the skills that I learned in the Google Data
+Analytics course. I was able to grow my SQL skills by querying and analyzing
+millions of rows of data and it also gave me the opportunity to learn how to
+create charts with Tableau.
