@@ -4,7 +4,7 @@ This case study is the capstone project for the Google Data Analytics Certificat
 offered on Coursera. For this scenario, I will be taking on the role of a junior
 data analyst working for a fictional bike-share company named Cyclistic.
 
-Click [here](https://www.coursera.org/learn/google-data-analytics-capstone/supplement/7PGIT/case-study-1-how-does-a-bike-share-navigate-speedy-success) for more details on the course.
+Click [here](https://www.coursera.org/professional-certificates/google-data-analytics) for more details on the course.
 
 More details on the case study can be found [here](Case-Study-1_How-does-a-bike-shared-navigate-speedy-success_.pdf).
 
